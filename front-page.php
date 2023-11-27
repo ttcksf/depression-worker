@@ -52,12 +52,12 @@
                     </div>
                     <div class="card_text">
                         <div class="name">
-                            <h2>山田太郎</h2>
-                            <h3>IT系フリーランス</h3>
+                            <h2>安達裕一朗</h2>
+                            <h3>サイト運営者</h3>
                         </div>
                         <div class="detail">
                             <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+                            学生時代からうつ病を患い通院、投薬治療をしながら生活している。サラリーマン時代に重度の再発を経験したことでライフワークについて本気で研究し同じような境遇の人たちに向けて情報発信を行っている。仕事は会社を立ち上げIT事業と小売事業をひっそりと行いながら持続可能な働き方改革を実践中。
                             </p>
                         </div>
                     </div>
