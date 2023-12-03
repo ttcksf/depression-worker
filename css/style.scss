@@ -473,28 +473,34 @@ textarea {
       }
       &-2 {
         li {
-          border: 1px solid #ffffff;
           max-width: 360px;
+          height: 50px;
+          border: 1px solid #ffffff;
           margin: 0 auto 45px;
           border-radius: 4px;
           display: flex;
-          span {
-            padding: 9px 15px;
-            width: 70%;
-            font-size: 2rem;
-            font-weight: normal;
-          }
           a {
-            padding: 9px 15px;
-            width: 30%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+            background-color: #d3d3d3;
             color: #333333;
             font-size: 2.1rem;
+            line-height: 50px;
             font-weight: normal;
-            text-align: center;
+            margin-left: 10px;
+            position: relative;
+            & > span {
+              position: absolute;
+              top: 0;
+              right: 0;
+              display: inline-block;
+              padding: 0px 15px;
+              max-width: 80px;
+              font-size: 2rem;
+              text-align: center;
+              font-weight: normal;
+              background-color: #ffffff;
+            }
           }
         }
         li:last-child {
@@ -520,7 +526,6 @@ textarea {
     }
   }
 }
-
 @include mq("lg") {
   .footer {
     &_top {
@@ -538,7 +543,7 @@ textarea {
           }
           a {
             color: #333333;
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: normal;
             text-align: left;
           }
@@ -548,6 +553,14 @@ textarea {
           padding: 0 47px;
           li {
             margin: 0 auto 20px;
+            a {
+              font-size: 1.7rem;
+              & > span {
+                max-width: 100px;
+                font-size: 1.6rem;
+                padding: 0 10px;
+              }
+            }
           }
         }
       }
@@ -565,7 +578,39 @@ textarea {
     }
   }
 }
-
+@include mq("xl") {
+  .footer {
+    &_top {
+      .footer_nav {
+        &-1 {
+          ul {
+          }
+          a {
+            font-size: 2.1rem;
+          }
+        }
+        &-2 {
+          li {
+            a {
+              font-size: 2.1rem;
+              & > span {
+                max-width: 100px;
+                font-size: 2.1rem;
+                padding: 0 15px;
+              }
+            }
+          }
+        }
+      }
+      .footer_twitter {
+      }
+    }
+    &_bottom {
+      small {
+      }
+    }
+  }
+}
 /* postbox */
 .postbox {
   font-family: "arial";
@@ -590,16 +635,17 @@ textarea {
         &:before {
           content: "";
           display: block;
-          padding-top: 75%;
+          padding-top: 56.25%;
         }
         span {
           position: absolute;
-          top: 28px;
-          left: 30px;
+          top: 0px;
+          left: 0px;
           font-weight: bold;
           font-size: 1.2rem;
           color: #ffffff;
-          -webkit-text-stroke: 1px #707070;
+          background: #707070;
+          padding: 4px 8px;
         }
       }
       &_text {
@@ -699,11 +745,11 @@ textarea {
       .detail {
         padding: 25px 20px 10px;
         border: 1px solid #95989a;
-        min-height: 420px;
+        min-height: 400px;
         p {
           font-weight: normal;
-          font-size: 2.5rem;
-          line-height: 1.2;
+          font-size: 1.7rem;
+          line-height: 1.7;
         }
       }
     }
@@ -956,7 +1002,7 @@ textarea {
     h2 {
       font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体",
         YuGothic;
-      font-size: 5rem;
+      font-size: 2.5rem;
       font-weight: bold;
       text-align: center;
       color: #333333;
@@ -970,15 +1016,14 @@ textarea {
     background-image: url(../img/no_image.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #7fc4fd;
+    background-size: contain;
   }
   &_content {
     margin-bottom: 40px;
     p {
       font-family: "メイリオ", "Meiryo";
-      font-size: 2.5rem;
-      line-height: 1.6;
+      font-size: 1.7rem;
+      line-height: 1.7;
       margin-bottom: 40px;
     }
     p:last-child {

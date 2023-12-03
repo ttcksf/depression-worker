@@ -53,7 +53,7 @@ add_action('init', 'my_widget_init');
 
 function add_click_button( $item_output, $item, $depth, $args ) {
     if ( !empty( $item->title ) && $args->container_class == 'footer_nav-2' ) {
-        $item_output = '<span>'.$item->title.'</span><a href="'.$item->url.'">click</a>';
+        $item_output = '<a href="'.$item->url.'">'.$item->title.'<span>click</span></a>';
     }
     return $item_output;
 }
