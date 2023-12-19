@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>うつ仕事</title>
+    <meta name="description" content="うつ病を持ちながら何とか働かれている方、休職中の方、復職を検討している方に向けたサイトです。">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/logo.png" >
     <meta property="og:title" content="depression-worker1">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://lorem-co-ltd.com/">
-	<meta property="og:image" content="./img/no_image.jpg">
+	<meta property="og:url" content="https://depression-worker.com/">
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/no_image.jpg">
 	<meta property="og:site_name" content="depression-worker">
 	<meta property="og:description" content="test">
 	<meta name="twitter:card" content="summary_large_image">
@@ -24,7 +26,7 @@
         </label>
         <div class="header_top">
             <div class="header_inner">
-                <h1 class="header_title"><a href="<?php echo esc_url(home_url('/'));?>"><?php bloginfo('name');?></a></h1>
+                <h1 class="header_title"><a href="<?php echo esc_url(home_url('/'));?>">うつ仕事</a></h1>
             </div>
             <?php get_search_form(); ?>
         </div>

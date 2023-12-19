@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&display=swap");
 // min-width
 $breakpoint-up: (
   "sm": "screen and (min-width: 480px)",
@@ -23,7 +23,7 @@ body {
   font-size: 62.5%;
 }
 body {
-  font-family: "メイリオ", "Meiryo", "arial", "游ゴシック Medium",
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p", "arial", "游ゴシック Medium",
     "Yu Gothic Medium", "游ゴシック体", YuGothic, Georgia, Times,
     Times New Roman, sans-serif;
   font-weight: 400;
@@ -59,14 +59,14 @@ input[type="text"],
 input[type="tel"],
 input[type="email"] {
   width: 100%;
-  font-family: "メイリオ", "Meiryo";
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p";
   font-size: 1.6rem;
   color: #333333;
   border: 1px solid #333333;
 }
 input[type="submit"] {
   width: 100%;
-  font-family: "メイリオ", "Meiryo";
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p";
   font-size: 1.6rem;
   color: #ffffff;
   border: 1px solid #333333;
@@ -78,7 +78,7 @@ input[type="submit"]:hover {
 }
 select {
   width: 100%;
-  font-family: "メイリオ", "Meiryo";
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p";
   font-size: 1.6rem;
   color: #333333;
   border: 1px solid #333333;
@@ -91,7 +91,7 @@ select {
 }
 textarea {
   width: 100%;
-  font-family: "メイリオ", "Meiryo";
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p";
   font-size: 1.6rem;
   color: #333333;
   border: 1px solid #333333;
@@ -119,7 +119,9 @@ textarea {
 }
 .inner {
   width: 100%;
-  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 .pagenation {
   width: 270px;
@@ -625,6 +627,7 @@ textarea {
       max-width: 335px;
       margin: 0 auto 65px;
       border: 1px solid #95989a;
+
       &_img {
         width: 100%;
         background-image: url(../img/no_image.jpg);
@@ -653,6 +656,7 @@ textarea {
       &_text {
         width: 100%;
         padding: 30px;
+        overflow: hidden;
         h2 {
           font-weight: bold;
           font-size: 2rem;
@@ -662,6 +666,11 @@ textarea {
           font-weight: normal;
           font-size: 1.4rem;
           line-height: 1.7;
+          overflow: hidden;
+          --max-lines: 7;
+          display: -webkit-box;
+          -webkit-line-clamp: var(--max-lines);
+          -webkit-box-orient: vertical;
         }
       }
     }
@@ -684,6 +693,14 @@ textarea {
       .card {
         width: calc((100% - 20px * 2) / 3);
         margin: 0 0 65px;
+        overflow: hidden;
+        height: 500px;
+
+        &_text {
+          p {
+            --max-lines: 5;
+          }
+        }
       }
     }
     .cards:after {
@@ -696,7 +713,7 @@ textarea {
 
 /* profile */
 .profile {
-  font-family: "メイリオ", "Meiryo";
+  font-family: "メイリオ", "Meiryo", "M PLUS 1p";
   padding: 0 0 20px;
   &_inner {
   }
@@ -992,7 +1009,7 @@ textarea {
   &_time {
     margin-bottom: 16px;
     h3 {
-      font-family: "メイリオ", "Meiryo";
+      font-family: "メイリオ", "Meiryo", "M PLUS 1p";
       font-size: 2rem;
       font-weight: bold;
       text-align: center;
@@ -1022,10 +1039,15 @@ textarea {
   }
   &_content {
     margin-bottom: 40px;
+    h2,
+    h3 {
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
     p {
-      font-family: "メイリオ", "Meiryo";
-      font-size: 1.6rem;
-      line-height: 1.7;
+      font-family: "メイリオ", "Meiryo", "M PLUS 1p";
+      font-size: 1.8rem;
+      line-height: 1.8;
       margin-bottom: 40px;
     }
     p:last-child {
@@ -1048,8 +1070,13 @@ textarea {
     }
     &_content {
       margin-bottom: 60px;
+      h2,
+      h3 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+      }
       p {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
     }
   }
