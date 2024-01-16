@@ -630,7 +630,6 @@ textarea {
 
       &_img {
         width: 100%;
-        background-image: url(../img/no_image.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -640,7 +639,6 @@ textarea {
         &:before {
           content: "";
           display: block;
-          padding-top: 56.25%;
         }
         span {
           position: absolute;
@@ -694,7 +692,6 @@ textarea {
         width: calc((100% - 20px * 2) / 3);
         margin: 0 0 65px;
         overflow: hidden;
-        height: 500px;
 
         &_text {
           p {

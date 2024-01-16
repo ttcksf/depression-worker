@@ -13,7 +13,15 @@
 	<meta property="og:site_name" content="depression-worker">
 	<meta property="og:description" content="test">
 	<meta name="twitter:card" content="summary_large_image">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFT8L3V8QB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-EFT8L3V8QB');
+    </script>
     <?php wp_head(); ?>
 </head>
 <body>
