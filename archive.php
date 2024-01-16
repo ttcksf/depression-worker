@@ -6,8 +6,7 @@
             <div class="postbox_inner inner">
                 <?php
                     $category = get_category($cat);
-                    $args = array("post_type" => "post", "paged" => $paged, "category_name" => $category->slug);
-                    // $args = array("post_type" => "post", "posts_per_page" => 6, "paged" => $paged, "category_name" => $category->slug);
+                    $args = array("post_type" => "post", "posts_per_page" => 6);
                     $the_query = new WP_Query($args);
                     if ($the_query->have_posts()) :
                 ?>
@@ -17,12 +16,8 @@
                     ?>
                             <div class="card">
                                 <a href="<?php the_permalink();?>">
+                                    <div class="card_img">
                                     <?php
-                                        if(has_post_thumbnail()) {
-                                            echo '<div class="card_img" style="background-image: url('.esc_url(get_the_post_thumbnail_url()).');">';
-                                        }else {
-                                            echo '<div class="card_img" style="background-image: url('.esc_url(get_template_directory_uri()).'/img/no_image.jpg);">';
-                                        }
                                         $category=get_the_category();
                                         if($category[0]){
                                             echo '<span>'.$category[0]->cat_name.'</span>';
