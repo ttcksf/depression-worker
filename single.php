@@ -13,23 +13,15 @@
                         $post_id = get_the_ID();
                         the_post();
                 ?>
-                        <div class="single_time">
-                            <h3><time datetime="<?php the_time('c');?>"><?php the_time('Y/m/d');?></time></h3>
-                        </div>
-                        <div class="single_title">
-                            <h2><?php the_title();?></h2>
-                        </div>
-                        <?php
-                            if(has_post_thumbnail()) {
-                                echo '<div class="single_eyecatching" style="background-image: url('.esc_url(get_the_post_thumbnail_url()).');">';
-                            }else {
-                                echo '<div class="single_eyecatching" style="background-image: url('.esc_url(get_template_directory_uri()).'/img/no_image.jpg);">';
-                            }
-                        ?>
-                        </div>
-                        <div class="single_content">
-                            <?php the_content();?>
-                        </div>
+                <div class="single_time">
+                    <h3><time datetime="<?php the_time('c');?>"><?php the_time('Y/m/d');?></time></h3>
+                </div>
+                <div class="single_title">
+                    <h2><?php the_title();?></h2>
+                </div>
+                <div class="single_content">
+                    <?php the_content();?>
+                </div>
                 <?php
                     endif;
                 ?>
@@ -55,7 +47,6 @@
                 <?php
                     if($category[0]) :
                         $args = array("post_type" => "post", "paged" => $paged, "category_name" => $category[0]->slug, "post__not_in" =>  array( $post_id ));
-                        // $args = array("post_type" => "post", "posts_per_page" => 6, "paged" => $paged, "category_name" => $category->slug);
                         $the_query = new WP_Query($args);
                 ?>
                             <div class="cards">
@@ -64,12 +55,8 @@
                                 ?>
                                     <div class="card">
                                         <a href="<?php the_permalink();?>">
+                                            <div class="card_img">
                                             <?php
-                                                if(has_post_thumbnail()) {
-                                                    echo '<div class="card_img" style="background-image: url('.esc_url(get_the_post_thumbnail_url()).');">';
-                                                }else {
-                                                    echo '<div class="card_img" style="background-image: url('.esc_url(get_template_directory_uri()).'/img/no_image.jpg);">';
-                                                }
                                                 $category=get_the_category();
                                                 if($category[0]){
                                                     echo '<span>'.$category[0]->cat_name.'</span>';
