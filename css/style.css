@@ -123,6 +123,7 @@ textarea {
 
 .pagenation {
   width: 270px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -152,7 +153,8 @@ textarea {
 
 .post_search {
   width: 300px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto 32px;
 }
 .post_search input[type=search] {
   width: 100%;

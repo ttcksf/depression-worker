@@ -37,11 +37,15 @@
                     <?php 
                         endwhile;
                     ?>
+                    
                 </div>
             <?php 
                 endif;
                 wp_reset_postdata();
             ?>
+                <div class="post_search">
+                    <?php get_search_form(); ?>
+                </div>
             </div>
         </section>
 

@@ -125,6 +125,7 @@ textarea {
 }
 .pagenation {
   width: 270px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -153,7 +154,8 @@ textarea {
 }
 .post_search {
   width: 300px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto 32px;
   input[type="search"] {
     width: 100%;
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体",
