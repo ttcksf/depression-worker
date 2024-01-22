@@ -6,8 +6,7 @@
             <div class="postbox_inner inner">
                 <?php
                     $category = get_category($cat);
-                    $args = array("post_type" => "post", "paged" => $paged, "category_name" => $category->slug);
-                    // $args = array("post_type" => "post", "posts_per_page" => 6, "paged" => $paged, "category_name" => $category->slug);
+                    $args = array("post_type" => "post", "posts_per_page" => 6);
                     $the_query = new WP_Query($args);
                     if ($the_query->have_posts()) :
                 ?>
