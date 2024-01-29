@@ -2,11 +2,11 @@
 
     <main>
 
-        <section class="section postbox">
+        <section class="section postbox category">
             <div class="postbox_inner inner">
-                <?php 
-                    $args = array("post_type" => "post", "paged" => $paged);
-                    // $args = array("post_type" => "post", "posts_per_page" => 6, "paged" => $paged);
+                <?php
+                    $category = get_category($cat);
+                    $args = array("post_type" => "post", "posts_per_page" => 6, "paged" => $paged);
                     $the_query = new WP_Query($args);
                     if ($the_query->have_posts()) :
                 ?>
@@ -37,6 +37,25 @@
             <?php 
                 endif;
                 wp_reset_postdata();
+            ?>
+            <?php
+                if(paginate_links()):
+            ?>
+                <div class="pagenation">
+                    <?php 
+                    echo paginate_links(
+                        array(
+                            'end-size' => 1,
+                            'mid_size' => 5,
+                            'prev-next' => true,
+                            'prev_text' => '<i class="fas fa-arrow-left"></i>',
+                            'next_text' => '<i class="fas fa-arrow-right"></i>'
+                        )
+                    );
+                    ?>
+                </div>
+            <?php 
+                endif;
             ?>
                 <div class="post_search">
                     <?php get_search_form(); ?>
