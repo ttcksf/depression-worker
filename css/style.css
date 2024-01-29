@@ -715,9 +715,6 @@ textarea {
   width: 100%;
 }
 .profile .card_text .name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 18px 0;
 }
 .profile .card_text .name h2 {
